@@ -28,6 +28,7 @@ regex
 * **Download Dataset**
 
 Download the PA100k dataset from [here](https://github.com/xh-liu/HydraPlus-Net#pa-100k-dataset), PETA dataset from [here](http://mmlab.ie.cuhk.edu.hk/projects/PETA.html) and RAP1 and RAP2 dataset form [here](https://www.rapdataset.com/).
+Since the PETA dataset requires preprocessing, we offer the preprocessed PETA dataset from [here](https://github.com/anonymity-author/RobustPAR-Checkpoint).
 
 Organize them in `your dataset root dir` folder as follows:
 ```
@@ -73,7 +74,7 @@ python dataset/preprocess/pa100k_pad.py
     In dataset/AttrDataset.py, modify ‘dataset_dir‘ at line 18 to your dataset directory.
     In train.py, modify ‘clip_model‘ at line 26 to the path where your CLIP pre-trained model is stored.
     In models/base_block.py, modify ‘pretrain_path‘ at line 57 to the path of your ViT pre-trained model.
-
+Download th ViT pre-trained model from [here](https://github.com/huggingface/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth).
 
 ## Training
 ```python
